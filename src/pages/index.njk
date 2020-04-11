@@ -11,10 +11,8 @@
     <a
       class="Gallery__image"
       href="{{ thing.data.page.url }}"
-      style="background-image: url('{{ thing.data.image }}');"
-    >
-      {{ thing.data.title }}
-    </a>
+      style="background-image: url('{{ thing.data.images[0].image }}');"
+    ></a>
   {% endfor %}
 </div>
 

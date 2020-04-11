@@ -1,0 +1,19 @@
+@use '../modules/media-queries' as *;
+
+#thing-layout {
+  display: grid;
+  grid-template-areas: 'info' 'image';
+
+  @media ($desktop-and-up) {
+    grid-template-areas: 'info image';
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#thing-info-section {
+  grid-area: info;
+}
+
+#thing-image-section {
+  grid-area: image;
+}

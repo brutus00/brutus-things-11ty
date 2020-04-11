@@ -1,4 +1,4 @@
 module.exports = {
   tags: ['thing'],
-  layout: 'things.njk',
+  layout: 'thing-layout.njk',
 }

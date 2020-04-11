@@ -17,7 +17,8 @@
 <body>
   {% include "header.njk" %}
 
-  <main>
+  {% set page_id = page_id or title or 'Home' %}
+  <main id="{{ page_id | slug }}-page">
     {% block content %}{% endblock %}
   </main>
 

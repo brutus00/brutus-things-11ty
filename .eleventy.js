@@ -11,6 +11,7 @@ module.exports = eleventyConfig => {
 
   // filters
   eleventyConfig.addFilter('consoleDump', require('./lib/console-dump'));
+  eleventyConfig.addFilter('split', require('./lib/split'));
 
   return {
     dir: {

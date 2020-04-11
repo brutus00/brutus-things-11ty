@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/dist/styles/pages/thing-layout.min.css">
+{% endblock %}
+
+{% block content %}
+<article id="thing-layout">
+
+  <section id="thing-info-section">
+    <h1>{{ title }}</h1>
+  </section>
+
+  <section id="thing-image-section">
+    <div class="Images">
+      {% for image in images %}
+        <figure>
+          <img src="{{ image.image }}" alt="{{ image.description }}">
+          <figcaption>{{ image.description }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+</article>
+{% endblock %}

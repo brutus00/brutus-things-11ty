@@ -1,6 +1,11 @@
+@use '../modules/media-queries' as *;
+
 .Gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--min, 250px), 1fr));
+
+  @media ($tablet) { --min: 200px; }
+  @media ($mobile) { --min: 150px; }
 }
 
 .Gallery__image {
