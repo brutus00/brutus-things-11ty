@@ -3,5 +3,5 @@ title: first pen test
 images:
   - image: /static/img/uploads/2-028.jpg
     description: this is a test description
-permalink: first-pen-test
+permalink: /thing/first-pen-test/
 ---
