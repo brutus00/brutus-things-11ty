@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+
+site_url: "https://brutus-things-11ty.netlify.com"
+display_url: "https://brutus-things-11ty.netlify.com"
+
+media_folder: static/img/uploads
+
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: brutus-things
+#     api_key: 663123968822718
+#     output_filename_only: true
+
+collections:
+  -
+    label: Things
+    name: things
+    create: true
+    folder: src/pages/things
+    preview_path: "things/{{ slug }}"
+    fields:
+      -
+        widget: string
+        label: Thing Title
+        name: title
+      -
+        widget: image
+        label: Thing Image
+        name: image
+      -
+        widget: hidden
+        label: tags
+        name: tags
+        default: "thing"

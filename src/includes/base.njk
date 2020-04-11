@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+
+  <link rel="stylesheet" href="/dist/styles/main.min.css">
+  {% block styles %}{% endblock %}
+
+  <title>{{ title or site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+</head>
+
+<body>
+  {% include "header.njk" %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <scripts src="/dist/scripts/main.min.js"></scripts>
+  {% block scripts %}{% endblock %}
+
+  {% if page.url == '/' %}
+    {# Netlify CMS #}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  {% endif %}
+</body>
+</html>

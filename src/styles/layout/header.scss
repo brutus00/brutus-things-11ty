@@ -1,0 +1,35 @@
+@use '../modules/media-queries' as *;
+@use '../modules/colors' as *;
+@use '../modules/fonts';
+
+
+.🎩 {
+  position: sticky;
+  top: 0;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(to bottom, $oregon-green-dark, $oregon-green);
+  text-align: center;
+}
+
+.🎩__title {
+  font-family: fonts.$bellotti;
+  font-size: 20px;
+  line-height: 1.3em;
+  letter-spacing: 2px;
+
+  @media ($tablet) { font-size: 18px; }
+  @media ($mobile) { font-size: 16px; }
+
+  a {
+    color: $oregon-yellow;
+    text-decoration: none;
+  }
+
+  .font-bellotti-alt {
+    font-family: fonts.$bellotti-alt;
+  }
+
+  .line {
+    display: inline-block;
+  }
+}

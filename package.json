@@ -1,0 +1,35 @@
+{
+  "name": "boilerplate-11ty",
+  "version": "1.0.0",
+  "description": "Boilerplate template for use with Eleventy, Svelte and Rollup",
+  "main": "index.js",
+  "repository": "https://github.com/nuotsu/boilerplate-11ty.git",
+  "author": "Mitchell Christ <xzmaru@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp scss-task && rollup -c && eleventy",
+    "dev": "yarn gulp & yarn 11ty",
+    "cleanup": "rm -rf _site* && rm -rf dist && yarn scss && rollup -c",
+    "11ty": "NODE_ENV=development eleventy --serve --quiet",
+    "gulp": "NODE_ENV=development gulp",
+    "scss": "NODE_ENV=development gulp scss-task",
+    "rollup": "NODE_ENV=development rollup -c -w"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^2.3.2",
+    "rollup-plugin-svelte": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "sass": "^1.26.3",
+    "svelte": "^3.20.1"
+  }
+}
