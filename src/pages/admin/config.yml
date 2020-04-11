@@ -42,4 +42,5 @@ collections:
         widget: string
         label: Permalink
         name: permalink
-        pattern: ['[0-9a-zA-Z]*', 'Allowed characters: 0-9, a-z and hyphens (-). No spaces.']
+        hint: 'Must follow this pattern: "/thing/name-of-thing/"'
+        pattern: ['^\/thing\/[^\s]+\/$', '/thing/name-of-thing/']

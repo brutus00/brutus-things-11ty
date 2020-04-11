@@ -37,4 +37,5 @@ function svelteBundle(filename, svelteOptions) {
 export default [
   // main.js
   jsBundle('main'),
+  jsBundle('netlify-cms'),
 ];
