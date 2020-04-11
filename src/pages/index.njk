@@ -1,11 +1,21 @@
 {% extends "base.njk" %}
 
+{% block styles %}
+  <link rel="stylesheet" href="/dist/styles/pages/home.min.css">
+{% endblock %}
+
 {% block content %}
 
-<h1>{{ site.title }}</h1>
-
-{% if env == 'development' %}
-  <a href="/admin">Admin Panel</a>
-{% endif %}
+<div class="Gallery">
+  {% for thing in collections.thing %}
+    <a
+      class="Gallery__image"
+      href="{{ thing.data.page.url }}"
+      style="background-image: url('{{ thing.data.image }}');"
+    >
+      {{ thing.data.title }}
+    </a>
+  {% endfor %}
+</div>
 
 {% endblock %}

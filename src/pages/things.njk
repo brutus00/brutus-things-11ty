@@ -1,0 +1,9 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+{% for thing in collections.thing %}
+  <a href="{{ thing.data.page.url }}">{{ thing.data.title }}</a>
+{% endfor %}
+
+{% endblock %}

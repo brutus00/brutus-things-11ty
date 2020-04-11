@@ -27,11 +27,15 @@ collections:
         label: Thing Title
         name: title
       -
-        widget: image
-        label: Thing Image
-        name: image
-      -
-        widget: hidden
-        label: tags
-        name: tags
-        default: "thing"
+        widget: list
+        label: Images
+        name: images
+        fields:
+          -
+            widget: image
+            label: Image
+            name: image
+          -
+            widget: text
+            label: Description
+            name: description
