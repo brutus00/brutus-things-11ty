@@ -1,1 +1,6 @@
+@use '../modules/media-queries' as *;
 @use '../layout/markdown';
+
+article {
+  max-width: $tablet-width;
+}

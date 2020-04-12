@@ -8,11 +8,13 @@
 
 <div class="Gallery">
   {% for thing in collections.thing %}
-    <a
-      class="Gallery__image"
-      href="{{ thing.data.page.url }}"
-      style="background-image: url('{{ thing.data.images[0].image }}');"
-    ></a>
+    {% for image in thing.data.images %}
+      <a
+        class="Gallery__image"
+        href="{{ thing.data.page.url }}"
+        style="background-image: url('{{ image.image }}');"
+      ></a>
+    {% endfor %}
   {% endfor %}
 </div>
 

@@ -1,3 +1,24 @@
+$h: 'h2, h3, h4, h5, h6';
+
+.Markdown {
+  font-size: 18px;
+  line-height: 1.3em;
+
+  & > :matches(p, h1, #{ $h }) {
+    margin-bottom: 1rem;
+  }
+}
+
+.Markdown {
+  h1 {
+    font-size: 32px;
+  }
+
+  #{ $h } {
+    font-size: 24px;
+  }
+}
+
 .Markdown {
   b, strong { font-weight: bold; }
 

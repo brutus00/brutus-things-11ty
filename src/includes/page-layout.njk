@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<article class="Markdown">
+<article>
+  <header class="Heading">
+    <h1>{{ title }}</h1>
+  </header>
 
-<h1>{{ title }}</h1>
-
-{{ content | safe }}
-
+  <section class="Markdown">
+    {{ content | safe }}
+  </section>
 </article>
 {% endblock %}

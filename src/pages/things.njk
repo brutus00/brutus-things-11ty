@@ -1,9 +1,18 @@
+---
+title: Things
+---
 {% extends "base.njk" %}
 
 {% block content %}
 
 {% for thing in collections.thing %}
+<article>
+  <header class="Heading">
+    <h1>{{ title }}</h1>
+  </header>
+
   <a href="{{ thing.data.page.url }}">{{ thing.data.title }}</a>
+</article>
 {% endfor %}
 
 {% endblock %}
