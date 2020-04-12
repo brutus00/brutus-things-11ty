@@ -1,5 +1,5 @@
 ---
-title: First Knife
+title: 1st Knife
 images:
   - image: /static/img/uploads/1-1-knives.jpg
     description: stainless blade and walnut handle
