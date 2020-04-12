@@ -14,8 +14,8 @@
   <section id="thing-image-section">
     <div class="Images">
       {% for image in images %}
-        <figure>
-          <img src="{{ image.image }}" alt="{{ image.description }}">
+        <figure class="Image">
+          <img src="{{ image.image | cloudinary('w_1000') }}" alt="{{ image.description }}">
           <figcaption>{{ image.description }}</figcaption>
         </figure>
       {% endfor %}

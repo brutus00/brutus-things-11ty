@@ -12,6 +12,9 @@ module.exports = eleventyConfig => {
   // filters
   eleventyConfig.addFilter('consoleDump', require('./lib/console-dump'));
   eleventyConfig.addFilter('split', require('./lib/split'));
+  eleventyConfig.addFilter('cloudinary', require('./lib/cloudinary'));
+
+  // shortcodes
   eleventyConfig.addShortcode('mi', require('./lib/material-icons'));
 
   return {

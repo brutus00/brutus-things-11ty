@@ -3,6 +3,7 @@
 #thing-layout {
   display: grid;
   grid-template-areas: 'info' 'image';
+  max-width: $desktop-width;
 
   @media ($desktop-and-up) {
     grid-template-areas: 'info image';
@@ -16,4 +17,12 @@
 
 #thing-image-section {
   grid-area: image;
+
+  .Image {
+    margin-bottom: 2rem;
+
+    img {
+      max-height: 600px;
+    }
+  }
 }
