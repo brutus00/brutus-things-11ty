@@ -9,6 +9,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('./dist/');
   eleventyConfig.addPassthroughCopy('./src/pages/admin/config.yml');
 
+  // libraries
+  eleventyConfig.setLibrary('md', require('./lib/markdown-it'));
+
   // filters
   eleventyConfig.addFilter('consoleDump', require('./lib/console-dump'));
   eleventyConfig.addFilter('split', require('./lib/split'));
