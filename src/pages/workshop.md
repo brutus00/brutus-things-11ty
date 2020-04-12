@@ -15,3 +15,5 @@ workshop
 ![lathe](/static/img/uploads/workshop-05.jpg "lathe")
 
 ![gluing & clamping](/static/img/uploads/workshop-06.jpg "gluing & clamping")
+
+![Dremel drill press](/static/img/uploads/workshop-07.jpg "Dremel drill press")
