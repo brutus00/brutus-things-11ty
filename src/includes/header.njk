@@ -6,4 +6,26 @@
       <span class="line">Handmade Things</span>
     </a>
   </h1>
+
+  <div class="🎩__menu">
+    <input id="🎩__menu-checkbox" type="checkbox">
+    <label class="🎩__menu-toggle" for="🎩__menu-checkbox">
+      {% mi 'menu' %}
+    </label>
+
+    <label class="🎩__menu-overlay" for="🎩__menu-checkbox"></label>
+
+    <div class="🎩__menu-contents">
+      <nav class="🎩__menu-nav">
+        <a href="/">Home</a>
+        <a href="/things">Things</a>
+        <a href="/workshop">Billy's Mini Workshop</a>
+        <a href="/profile">Profile</a>
+      </nav>
+
+      <label class="🎩__menu-close" for="🎩__menu-checkbox">
+        {% mi 'close' %} close
+      </label>
+    </div>
+  </div>
 </header>

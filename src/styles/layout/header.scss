@@ -2,16 +2,30 @@
 @use '../modules/colors' as *;
 @use '../modules/fonts';
 
+@use '../components/menu-contents';
 
 .🎩 {
+  display: grid;
+  grid-template-areas: 'menu title blank';
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  &::after {
+    grid-area: blank;
+    content: '';
+  }
+
   position: sticky;
   top: 0;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   background-image: linear-gradient(to bottom, $oregon-green-dark, $oregon-green);
   text-align: center;
+  overflow: hidden;
 }
 
 .🎩__title {
+  grid-area: title;
   font-family: fonts.$bellotti;
   font-size: 20px;
   line-height: 1.3em;
@@ -32,4 +46,54 @@
   .line {
     display: inline-block;
   }
+}
+
+/*
+  menu
+*/
+
+.🎩__menu {
+  grid-area: menu;
+  display: grid;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.🎩__menu-toggle {
+  cursor: pointer;
+  padding: .5ch 1ch;
+  color: $oregon-yellow;
+  font-size: 24px;
+}
+
+#🎩__menu-checkbox {
+  display: none;
+
+  &:not(:checked) {
+    & ~ .🎩__menu-contents {
+      transform: translateX(-100%);
+    }
+
+    & ~ .🎩__menu-overlay {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+.🎩__menu-contents {
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0; bottom: 0;
+  background-color: #fff;
+  transition: transform $t;
+}
+
+.🎩__menu-overlay {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  background-color: rgba(#000, .8);
+  transition: opacity $t;
 }
