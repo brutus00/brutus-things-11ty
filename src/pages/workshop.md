@@ -2,8 +2,10 @@
 title: Billy's Mini Workshop
 layout: page-layout.njk
 ---
-Billy's Mini Workshop
+workshop
 
-more [stuff](https://www.google.com).
+![](/static/img/uploads/workshop-01.jpg)
 
-![image](/static/img/uploads/2-028.jpg "this is an image")
+![](/static/img/uploads/workshop-02.jpg)
+
+![](/static/img/uploads/workshop-03.jpg)
