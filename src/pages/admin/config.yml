@@ -7,40 +7,44 @@ display_url: "https://brutus-things-11ty.netlify.com"
 
 media_folder: static/img/uploads
 
-# media_library:
-#   name: cloudinary
-#   config:
-#     cloud_name: brutus-things
-#     api_key: 663123968822718
-#     output_filename_only: true
-
 collections:
-  -
-    label: Things
+  - label: Things
     name: things
     create: true
     folder: src/pages/things
     fields:
-      -
-        widget: string
+      - widget: string
         label: Thing Title
         name: title
-      -
-        widget: list
+      - widget: list
         label: Images
         name: images
         fields:
-          -
-            widget: image
-            label: Image
-            name: image
-          -
-            widget: text
-            label: Description
-            name: description
-      -
-        widget: string
+          - { widget: image, label: Image, name: image }
+          - { widget: text, label: Description, name: description }
+      - widget: string
         label: Permalink
         name: permalink
         hint: 'Must follow this pattern: "/thing/name-of-thing/"'
         pattern: ['^\/thing\/[^\s]+\/$', '/thing/name-of-thing/']
+  - label: Pages
+    name: pages
+    files:
+      - label: Profile Page
+        name: profile
+        file: src/pages/profile.md
+        fields:
+          - { widget: string, label: Page Title, name: title }
+          - { widget: markdown, label: Body, name: body }
+      - label: Workshop Page
+        name: workshop
+        file: src/pages/workshop.md
+        fields:
+          - { widget: string, label: Page Title, name: title }
+          - { widget: markdown, label: Body, name: body }
+      - label: test Page
+        name: test
+        file: src/pages/test.md
+        fields:
+          - { widget: string, label: Page Title, name: title }
+          - { widget: markdown, label: Body, name: body }

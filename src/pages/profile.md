@@ -1,5 +1,6 @@
 ---
 title: Profile
+layout: page-layout.njk
 ---
 This is Billy's profile page. test
 
