@@ -13,5 +13,11 @@ images:
     description: pine and acrylic
   - image: /static/img/uploads/pens-06.jpg
     description: plum; beech burl
+  - image: /static/img/uploads/pens-07.jpg
+    description: sapphire acrylic with hardwoods
+  - image: /static/img/uploads/pens-08.jpg
+    description: peacock acrylic; primavera
+  - image: /static/img/uploads/pens-09.jpg
+    description: Go Ducks!
 permalink: /thing/pens/
 ---
