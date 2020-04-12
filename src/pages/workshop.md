@@ -9,3 +9,5 @@ workshop
 ![](/static/img/uploads/workshop-02.jpg)
 
 ![](/static/img/uploads/workshop-03.jpg)
+
+![](/static/img/uploads/workshop-04.jpg)
