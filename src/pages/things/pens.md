@@ -9,5 +9,9 @@ images:
     description: turquoise acrylic & primavera; turquoise acrylic & partridge wood
   - image: /static/img/uploads/pens-04.jpg
     description: various pens
+  - image: /static/img/uploads/pens-05.jpg
+    description: pine and acrylic
+  - image: /static/img/uploads/pens-06.jpg
+    description: plum; beech burl
 permalink: /thing/pens/
 ---
