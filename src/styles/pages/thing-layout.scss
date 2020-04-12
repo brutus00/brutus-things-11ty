@@ -1,28 +1,53 @@
+@use '../modules/colors' as *;
 @use '../modules/media-queries' as *;
+@use '../modules/mixins';
 
-#thing-layout {
-  display: grid;
-  grid-template-areas: 'info' 'image';
-  max-width: $desktop-width;
+$bdrs: 4px;
 
-  @media ($desktop-and-up) {
-    grid-template-areas: 'info image';
-    grid-template-columns: 1fr 1fr;
+.Images {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  @media ($mobile) {
+    @include mixins.fullwidth;
   }
 }
 
-#thing-info-section {
-  grid-area: info;
+.Image {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  white-space: normal;
+  scroll-snap-align: center;
 }
 
-#thing-image-section {
-  grid-area: image;
+img {
+  max-height: 50vh;
+  object-fit: cover;
+  border-radius: $bdrs $bdrs 0 0;
+}
 
-  .Image {
-    margin-bottom: 2rem;
+figcaption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .5ch;
+  padding: 2ch 1ch;
+  border-radius: 0 0 $bdrs $bdrs;
+  background-color: $bg-lighter;
+  color: $text-light;
+  font-style: italic;
+  line-height: 1.3em;
 
-    img {
-      max-height: 600px;
-    }
+  span::first-letter {
+    text-transform: capitalize;
+  }
+
+  .material-icons {
+    padding-inline: .5ch;
+    color: $text-lighter;
   }
 }
