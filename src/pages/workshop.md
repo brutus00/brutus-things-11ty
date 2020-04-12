@@ -13,3 +13,5 @@ workshop
 ![](/static/img/uploads/workshop-04.jpg)
 
 ![lathe](/static/img/uploads/workshop-05.jpg "lathe")
+
+![gluing & clamping](/static/img/uploads/workshop-06.jpg "gluing & clamping")
