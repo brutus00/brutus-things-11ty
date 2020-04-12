@@ -1,5 +1,6 @@
 ---
 title: Billy's Mini Workshop
+layout: page-layout.njk
 ---
 Billy's Mini Workshop
 

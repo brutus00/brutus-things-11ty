@@ -1,9 +1,15 @@
 {% extends "base.njk" %}
 
+{% block styles %}
+  <link rel="stylesheet" href="/dist/styles/pages/page-layout.min.css">
+{% endblock %}
+
 {% block content %}
+<article class="Markdown">
 
 <h1>{{ title }}</h1>
 
-{{ body }}
+{{ content | safe }}
 
+</article>
 {% endblock %}
