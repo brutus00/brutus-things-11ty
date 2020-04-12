@@ -4,7 +4,7 @@ layout: page-layout.njk
 ---
 workshop
 
-![](/static/img/uploads/workshop-01.jpg)
+![workshop](/static/img/uploads/workshop-01.jpg "workshop")
 
 ![](/static/img/uploads/workshop-02.jpg)
 
