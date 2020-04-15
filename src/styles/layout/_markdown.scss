@@ -7,6 +7,13 @@ $h: 'h2, h3, h4, h5, h6';
   & > :matches(p, h1, #{ $h }) {
     margin-block-end: 1rem;
   }
+
+  img {
+    display: block;
+    border-radius: 2px;
+    max-height: 600px;
+    margin-inline: auto;
+  }
 }
 
 .Markdown {
