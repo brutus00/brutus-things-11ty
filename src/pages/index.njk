@@ -7,7 +7,7 @@
 {% block content %}
 
 <div class="Gallery">
-  {% for thing in collections.thing %}
+  {% for thing in collections.thing | reverse %}
     {% for image in thing.data.images %}
       <a
         class="Gallery__image"

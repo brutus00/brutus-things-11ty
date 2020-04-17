@@ -19,7 +19,7 @@
   position: sticky;
   top: 0;
   padding: 1rem 0;
-  background-image: linear-gradient(to bottom, $oregon-green-dark, $oregon-green);
+  background-image: linear-gradient(to bottom, $duck-green-dark, $duck-green);
   text-align: center;
 }
 
@@ -34,7 +34,7 @@
   @media ($mobile) { font-size: 16px; }
 
   a {
-    color: $oregon-yellow;
+    color: $duck-yellow;
     text-decoration: none;
   }
 
