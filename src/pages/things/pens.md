@@ -25,5 +25,7 @@ images:
     description: walnut and acrylic
   - image: /static/img/uploads/pens-13.jpg
     description: Brandon's pen
+  - image: /static/img/uploads/pens-05.jpg
+    description: pine and acrylic
 permalink: /thing/pens/
 ---
