@@ -14,7 +14,7 @@ title: Things
   </header>
 
   <section class="Things-list">
-    {% for thing in collections.thing %}
+    {% for thing in collections.thing | reverse %}
       <div class="Things-item">
         <a href="{{ thing.data.page.url }}">
           <img src="{{ thing.data.images[0].image | cloudinary('w_300') }}" alt="{{ thing.data.title }}">
