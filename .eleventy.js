@@ -10,15 +10,15 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('./src/pages/admin/config.yml');
 
   // libraries
-  eleventyConfig.setLibrary('md', require('./lib/markdown-it'));
+  eleventyConfig.setLibrary('md', require('./utils/markdown-it'));
 
   // filters
-  eleventyConfig.addFilter('consoleDump', require('./lib/console-dump'));
-  eleventyConfig.addFilter('split', require('./lib/split'));
-  eleventyConfig.addFilter('cloudinary', require('./lib/cloudinary'));
+  eleventyConfig.addFilter('consoleDump', require('./utils/console-dump'));
+  eleventyConfig.addFilter('split', require('./utils/split'));
+  eleventyConfig.addFilter('cloudinary', require('./utils/cloudinary'));
 
   // shortcodes
-  eleventyConfig.addShortcode('mi', require('./lib/material-icons'));
+  eleventyConfig.addShortcode('mi', require('./utils/material-icons'));
 
   return {
     dir: {
