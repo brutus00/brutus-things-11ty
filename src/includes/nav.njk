@@ -1,0 +1,9 @@
+<nav>
+  <a href="/">Home</a>
+  <a href="/things">Things</a>
+  <a href="/workshop">Workshop</a>
+  <a href="/about">About</a>
+  {% if env == 'development' -%}
+    <a href="/admin" {% newtab %}>Admin</a>
+  {%- endif %}
+</nav>

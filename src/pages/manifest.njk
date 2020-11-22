@@ -1,0 +1,18 @@
+---
+permalink: /manifest.json
+---
+{
+  "name": "{{ site.title.short }}",
+  "icons": [
+    {% for size in [192,512] -%}
+    {
+      "src": "https:{% cloudinary 'w_'+size, 'f_png' %}/favicon",
+      "type": "image/png",
+      "sizes": "{{ size }}x{{ size }}"
+    }{% if not loop.last %},{% endif -%}
+    {% endfor %}
+  ],
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#191f2b"
+}

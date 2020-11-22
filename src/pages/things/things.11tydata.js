@@ -1,3 +1,6 @@
 module.exports = {
-  permalink: false,
+  layout: 'content.njk',
+  eleventyComputed: {
+    permalink: ({ page }) => `/things/${ page.fileSlug }/`
+  }
 }

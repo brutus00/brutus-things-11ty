@@ -14,16 +14,16 @@
 
   <title>
     {%- if title -%}
-      {{ title }} | {{ site.title }}
+      {{ title }} | {{ site.title.long }}
     {%- else -%}
-      {{ site.title }}
+      {{ site.title.long }}
     {%- endif -%}
   </title>
 
   {%- if description -%}
     {% set meta_description = description %}
   {%- else -%}
-    {% set meta_description = site.description %}
+    {% set meta_description = site.description.long %}
   {%- endif -%}
   <meta name="description" content="{{ meta_description | truncate(157, '...') }}">
 
@@ -34,6 +34,8 @@
 </head>
 
 <body>
+  {% include 'nav.njk' %}
+
   <main>
     {% block content %}{% endblock %}
   </main>

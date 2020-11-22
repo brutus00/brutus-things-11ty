@@ -7,6 +7,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('./static/');
 
   eleventyConfig.addShortcode('cloudinary', require('./src/shortcodes/cloudinary'));
+  eleventyConfig.addShortcode('newtab', require('./src/shortcodes/newtab'));
 
   return {
     dir: {
@@ -14,6 +15,7 @@ module.exports = eleventyConfig => {
       output:   './_site',
       data:     '../data/',
       includes: '../includes/',
+      layouts: '../layouts/',
     }
   }
 }
