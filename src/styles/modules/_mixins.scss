@@ -1,4 +1,0 @@
-@mixin fullwidth($padding: 0px) {
-  width: calc(100vw - #{ $padding * 2 });
-  margin-inline: calc(50% - 50vw + #{ $padding });
-}

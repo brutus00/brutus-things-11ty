@@ -2,8 +2,3 @@ node_modules/
 .vscode/
 
 _site/
-_site-dev/
-
-dist/
-
-.netlify
