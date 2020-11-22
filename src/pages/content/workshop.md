@@ -1,7 +1,7 @@
 ---
 title: Billy's Mini Workshop
 ---
-workshop
+This is Billy's workshop.
 
 ![workshop](/static/img/uploads/workshop-01.jpg "workshop")
 
