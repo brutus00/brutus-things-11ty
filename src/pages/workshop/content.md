@@ -1,4 +1,5 @@
 ---
+permalink: false
 title: Billy's Mini Workshop
 ---
 workshop

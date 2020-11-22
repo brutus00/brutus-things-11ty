@@ -1,4 +1,4 @@
 module.exports = {
+  permalink: false,
   tags: ['thing'],
-  layout: 'thing-layout.njk',
 }
