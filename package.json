@@ -11,7 +11,7 @@
     "build": "yarn clean && yarn build:11ty && yarn build:styles",
     "build:11ty": "NODE_ENV=production eleventy",
     "build:styles": "NODE_ENV=production postcss ./src/styles/ -d ./_site/dist/styles/",
-    "dev": "yarn clean && yarn dev:styles & yarn dev:11ty",
+    "dev": "yarn clean && yarn dev:11ty & yarn dev:styles",
     "dev:11ty": "NODE_ENV=development eleventy --serve --watch",
     "dev:styles": "NODE_ENV=development postcss ./src/styles/ -d ./_site/dist/styles/ --watch",
     "clean": "rm -rf ./_site/"

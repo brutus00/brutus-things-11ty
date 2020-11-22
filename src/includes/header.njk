@@ -1,0 +1,16 @@
+{%- from 'icons/menu.njk' import menu_icon -%}
+
+<header class="flex items-center text-center bg-gradient-to-b from-green-dark to-green-DEFAULT sticky top-0 text-yellow-DEFAULT">
+  <label for="sitenav-opened" class="cursor-pointer p-4 pr-0">
+    {{ menu_icon('class="h-8"') }}
+  </label>
+
+  <div class="font-oregon text-sm sm:text-xl flex-grow p-4">
+    <a href="/">
+      {{- site.title.long
+        | replace("'", '<span class="font-serif">\'</span></span>')
+        | safe
+      -}}
+    </a>
+  </div>
+</header>

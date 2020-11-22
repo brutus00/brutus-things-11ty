@@ -10,7 +10,7 @@
   {% endfor -%}
   {% for size in [152,180] -%}
     <link rel="apple-touch-icon" href="{% cloudinary 'w_'+size, 'f_png' %}/favicon" sizes="{{ size }}x{{ size }}">
-  {% endfor %}
+  {% endfor -%}
 
   <title>
     {%- if title -%}
@@ -20,11 +20,11 @@
     {%- endif -%}
   </title>
 
-  {%- if description -%}
+  {% if description -%}
     {% set meta_description = description %}
-  {%- else -%}
+  {% else -%}
     {% set meta_description = site.description.long %}
-  {%- endif -%}
+  {% endif -%}
   <meta name="description" content="{{ meta_description | truncate(157, '...') }}">
 
   <link rel="manifest" href="/manifest.json">
@@ -34,6 +34,7 @@
 </head>
 
 <body>
+  {% include 'header.njk' %}
   {% include 'nav.njk' %}
 
   <main>

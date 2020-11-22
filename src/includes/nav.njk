@@ -1,9 +1,19 @@
-<nav>
-  <a href="/">Home</a>
-  <a href="/things">Things</a>
-  <a href="/workshop">Workshop</a>
-  <a href="/about">About</a>
-  {% if env == 'development' -%}
-    <a href="/admin" {% newtab %}>Admin</a>
-  {%- endif %}
-</nav>
+<input id="sitenav-opened" type="checkbox" hidden>
+<label for="sitenav-opened" class="sitenav-overlay fixed inset-0 bg-black bg-opacity-75 transition-opacity duration-200"></label>
+
+<div class="sitenav fixed inset-y-0 left-0 sitenav bg-white h-full text-center transform transition-transform duration-200">
+  <nav>
+    {%- set sitenav_item_class -%}
+      class="sitenav-item block p-2 border-solid border-b border-gray-300 hover:bg-gray-200"
+    {%- endset -%}
+
+    <a {{ sitenav_item_class | trim | safe }} href="/">Home</a>
+    <a {{ sitenav_item_class | trim | safe }} href="/things">Things</a>
+    <a {{ sitenav_item_class | trim | safe }} href="/workshop">Workshop</a>
+    <a {{ sitenav_item_class | trim | safe }} href="/about">About</a>
+    {% if env == 'development' -%}
+      <a {{ sitenav_item_class | trim | safe }} href="/admin" {% newtab %}>Admin</a>
+    {%- endif %}
+  </nav>
+</div>
+

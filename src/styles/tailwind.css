@@ -3,3 +3,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: BellottiBold;
+  src:
+    url('/static/fonts/NCAA\ Oregon\ Ducks.otf')
+    format('opentype');
+}
+
+.debug {
+  border: 5px dashed red;
+}
+
+/* sitenav */
+
+#sitenav-opened:not(:checked) ~ .sitenav-overlay {
+  @apply
+    opacity-0
+    pointer-events-none
+  ;
+}
+
+#sitenav-opened:not(:checked) ~ .sitenav {
+  @apply
+    -translate-x-full
+    pointer-events-none
+  ;
+}
+
+.sitenav {
+  width: min(300px, 100%);
+}

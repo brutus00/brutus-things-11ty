@@ -10,9 +10,22 @@ module.exports = {
       fontFamily: {
         'sans': ['Barlow', 'sans-serif'],
         'serif': ['DM Serif Text', 'serif'],
+        'oregon': ['BellottiBold', 'serif'],
       },
-      screens: {
-        'dark-mode': { raw: '(prefers-color-scheme: dark)' },
+      colors:{
+        yellow: {
+          DEFAULT: '#ffe70e',
+        },
+        green: {
+          DEFAULT: '#05552f',
+          dark: '#004122',
+        }
+      },
+      maxWidth: {
+        max: 'max-content',
+      },
+      minWidth: {
+        sidebar: 300
       }
     }
   }
