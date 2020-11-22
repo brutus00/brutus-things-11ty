@@ -28,15 +28,13 @@ collections:
     files:
       - label: Profile Page
         name: profile
-        file: src/pages/profile/content.md
+        file: src/pages/content/profile.md
         fields:
-          - { widget: hidden, name: permalink, default: false }
           - { widget: string, label: Page Title, name: title }
           - { widget: markdown, label: Body, name: body }
       - label: Workshop Page
         name: workshop
-        file: src/pages/workshop/content.md
+        file: src/pages/content/workshop.md
         fields:
-          - { widget: hidden, name: permalink, default: false }
           - { widget: string, label: Page Title, name: title }
           - { widget: markdown, label: Body, name: body }

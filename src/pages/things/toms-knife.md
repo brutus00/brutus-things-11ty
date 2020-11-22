@@ -13,5 +13,4 @@ images:
     description: sanding and finishing
   - image: /static/img/uploads/tom-s-knife-2.jpg
     description: finished knife
-permalink: /thing/Tom's-knife/
 ---

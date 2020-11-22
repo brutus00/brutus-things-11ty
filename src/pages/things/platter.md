@@ -9,5 +9,4 @@ images:
     description: clamping
   - image: /static/img/uploads/platter.jpg
     description: finished platter with mahogany, zebra wood and cherry
-permalink: /thing/platter/
 ---

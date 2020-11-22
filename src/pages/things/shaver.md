@@ -5,5 +5,4 @@ images:
     description: "hand carved shaver: padauk & acrylic"
   - image: /static/img/uploads/shaver-2.jpg
     description: "lathe turned:  partridge wood & acrylic"
-permalink: /thing/shaver/
 ---

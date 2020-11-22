@@ -1,5 +1,4 @@
 ---
-permalink: false
 title: Profile
 ---
 ![Brutus](/static/img/uploads/brutus.jpg)

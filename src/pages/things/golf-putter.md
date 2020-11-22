@@ -13,5 +13,4 @@ images:
     description: |-
       pau rosa with brass insert
       (yes, it works)
-permalink: /thing/golf-putter/
 ---

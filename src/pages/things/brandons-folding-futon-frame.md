@@ -7,5 +7,4 @@ images:
     description: fixing the slats
   - image: /static/img/uploads/brandon-futon-sunoku-3.jpg
     description: finished futon frame
-permalink: /thing/Brandon's-folding-futon-frame/
 ---

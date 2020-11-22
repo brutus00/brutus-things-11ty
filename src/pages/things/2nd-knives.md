@@ -7,5 +7,4 @@ images:
     description: brass pipe fitting knives, made from disassembled scissors
   - image: /static/img/uploads/2-3-knives.jpg
     description: brass pipe fitting knives, made from disassembled scissors
-permalink: /thing/brass-pipe-fitting-knives/
 ---

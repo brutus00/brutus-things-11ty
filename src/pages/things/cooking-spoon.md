@@ -7,5 +7,4 @@ images:
     description: "hand carved left handed spoon: alder"
   - image: /static/img/uploads/cooking-spoon-3.jpg
     description: "hand carved left handed spoon: alder"
-permalink: /thing/spoon/
 ---

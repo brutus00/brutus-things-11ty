@@ -13,5 +13,4 @@ images:
     description: gluing
   - image: /static/img/uploads/knives10.jpg
     description: finished chef knife with bamboo tray
-permalink: /thing/chef-knives/
 ---

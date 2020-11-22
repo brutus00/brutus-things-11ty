@@ -8,5 +8,4 @@ images:
   - image: /static/img/uploads/pen-holder.jpg
     description: "finished pen holder: mahogany, walnut, zebra wood, Brazilian
       rosewood, pau rosa, copper fittings"
-permalink: /thing/pen-holder/
 ---
