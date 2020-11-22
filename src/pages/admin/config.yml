@@ -26,9 +26,9 @@ collections:
   - label: Pages
     name: pages
     files:
-      - label: Profile Page
-        name: profile
-        file: src/pages/content/profile.md
+      - label: About Page
+        name: about
+        file: src/pages/content/about.md
         fields:
           - { widget: string, label: Page Title, name: title }
           - { widget: markdown, label: Body, name: body }

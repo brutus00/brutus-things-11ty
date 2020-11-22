@@ -1,5 +1,5 @@
 ---
-title: Profile
+title: About
 ---
 ![Brutus](/static/img/uploads/brutus.jpg)
 
