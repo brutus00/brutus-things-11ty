@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: redesign
 
-site_url: "https://brutus-things-11ty.netlify.com"
-display_url: "https://brutus-things-11ty.netlify.com"
+site_url: "https://brutus-things-11ty.netlify.app"
+display_url: "https://brutus-things-11ty.netlify.app"
 
 media_folder: static/img/uploads
 
@@ -27,18 +27,21 @@ collections:
         name: permalink
         hint: 'Must follow this pattern: "/thing/name-of-thing/"'
         pattern: ['^\/thing\/[^\s]+\/$', '/thing/name-of-thing/']
+
   - label: Pages
     name: pages
     files:
       - label: Profile Page
         name: profile
-        file: src/pages/profile.md
+        file: src/pages/profile/content.md
         fields:
+          - { widget: hidden, name: permalink, default: false }
           - { widget: string, label: Page Title, name: title }
           - { widget: markdown, label: Body, name: body }
       - label: Workshop Page
         name: workshop
-        file: src/pages/workshop.md
+        file: src/pages/workshop/content.md
         fields:
+          - { widget: hidden, name: permalink, default: false }
           - { widget: string, label: Page Title, name: title }
           - { widget: markdown, label: Body, name: body }

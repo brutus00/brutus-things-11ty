@@ -1,6 +1,5 @@
 ---
 title: Billy's Mini Workshop
-layout: page-layout.njk
 ---
 workshop
 

@@ -4,6 +4,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true);
 
   eleventyConfig.addPassthroughCopy('./src/pages/admin/config.yml');
+  eleventyConfig.addPassthroughCopy('./static/');
 
   eleventyConfig.addShortcode('cloudinary', require('./src/shortcodes/cloudinary'));
 

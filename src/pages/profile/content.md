@@ -1,6 +1,5 @@
 ---
 title: Profile
-layout: page-layout.njk
 ---
 ![Brutus](/static/img/uploads/brutus.jpg)
 
