@@ -10,6 +10,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('newTab', require('./src/11ty/new-tab'));
   eleventyConfig.addFilter('srcset', require('./src/11ty/srcset'));
 
+  eleventyConfig.setLibrary('md', require('./src/11ty/markdown-it'));
+
   return {
     dir: {
       input:    './src/pages/',
