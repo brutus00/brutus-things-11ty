@@ -21,6 +21,9 @@ module.exports = {
           dark: '#004122',
         }
       },
+      spacing: {
+        'env-b': 'env(safe-area-inset-bottom)',
+      },
       maxWidth: {
         max: 'max-content',
       },
@@ -28,6 +31,7 @@ module.exports = {
         sidebar: 300,
       },
     },
+
     inset: {
       0: 0,
       'auto': 'auto',

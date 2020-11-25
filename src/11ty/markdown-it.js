@@ -9,10 +9,10 @@ const cloudinaryImageUrl = (md, options) => {
     const image = token.attrGet('src')
 
     const sizes = [200,400,600];
-    const srcsets = sizes.map((size, i) => `${ cloudinary('w_' + size) }${ image } ${ ++i }x`);
+    const srcsets = sizes.map((size, i) => `${ cloudinary('w_' + size) }/netlify${ image } ${ ++i }x`);
 
     token.attrSet('srcset', srcsets.join(','));
-    token.attrSet('src', `${ cloudinary('w_' + sizes[1]) }${ image }`);
+    token.attrSet('src', `${ cloudinary('w_' + sizes[1]) }/netlify${ image }`);
     token.attrSet('width', sizes[1]);
     token.attrSet('loading', 'lazy');
 

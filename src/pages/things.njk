@@ -15,7 +15,7 @@ title: Things
           <img
             class="rounded-sm shadow-lg"
             {{ image.image | srcset([100,200,300], 'ar_1,c_fill,g_auto') | safe }}
-            src="{% cloudinary 'w_100,ar_1,c_fill,g_auto' %}{{ image.image }}"
+            src="{% cloudinary 'w_100,ar_1,c_fill,g_auto' %}/netlify{{ image.image }}"
             alt="{{ image.description }}"
             width="100" height="100"
             draggable="false"
