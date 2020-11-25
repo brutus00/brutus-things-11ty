@@ -11,14 +11,35 @@
     format('opentype');
 }
 
+::selection {
+  @apply bg-green-DEFAULT bg-opacity-50;
+}
+
 /* classes */
 
 .debug {
-  border: 5px dashed red;
+  outline: 5px dashed red;
 }
 
 .title {
-  @apply text-3xl font-serif;
+  @apply text-3xl font-serif mb-12;
+}
+
+.fade {
+  @apply transition-opacity duration-200;
+}
+.fade:hover {
+  @apply opacity-75;
+}
+
+.bg-fade {
+  @apply rounded-sm px-2 py-1 transition-colors duration-200;
+}
+.bg-fade:hover {
+  @apply bg-gray-200;
+}
+.bg-fade:active {
+  @apply bg-gray-400;
 }
 
 /* sitenav */

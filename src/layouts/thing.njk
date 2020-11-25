@@ -1,27 +1,40 @@
+{%- from 'icons/chevron-left.njk' import chevron_left_icon -%}
+
 {% extends 'base.njk' %}
 
 {% block content %}
-<section>
-  <h1 class="title">{{ title | safe }}</h1>
+<section class="grid md:grid-cols-2 gap-8">
+  <div class="md:order-2">
+    <div class="sticky top-24">
+      <h1 class="title">{{ title | safe }}</h1>
 
-  {% if description -%}
-    <div>{{ description | nl2br }}</div>
-  {% endif -%}
+      {% if description -%}
+        <div>{{ description | nl2br }}</div>
+      {% endif -%}
 
-  {% for image in images -%}
-    <figure>
-      <img
-        {{ image.image | srcset([200, 400, 600]) | safe }}
-        width="400"
-        alt="{{ image.description }}"
-        loading="lazy"
-      />
-      <figcaption>{{ image.description }}</figcaption>
-    </figure>
-  {% endfor -%}
+      <hr class="mb-4">
 
-  <div>
-    <a href="..">Back to Things</a>
+      <a href=".." class="bg-fade">{{ chevron_left_icon('class="h-4 inline-block"') }} Back to Things</a>
+    </div>
+  </div>
+
+  <div class="md:order-1">
+    <div class="sticky top-24">
+      {% for image in images -%}
+        <figure class="relative mb-12">
+          <img
+            class="rounded-sm shadow-lg w-full h-auto"
+            {{ image.image | srcset([200, 600, 1000]) | safe }}
+            width="600"
+            alt="{{ image.description }}"
+            loading="lazy"
+          />
+          <figcaption class="absolute inset-0 m-4 flex flex-row items-end content-end">
+            <span class="bg-white px-2 py-1 rounded-sm sticky bottom-4 bg-opacity-75 shadow-md">{{ image.description }}</span>
+          </figcaption>
+        </figure>
+      {% endfor -%}
+    </div>
   </div>
 </section>
 {% endblock %}

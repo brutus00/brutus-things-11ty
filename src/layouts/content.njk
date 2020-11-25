@@ -1,11 +1,17 @@
 {% extends 'base.njk' %}
 
+{% block styles %}
+  <link rel="stylesheet" href="/dist/styles/content.css">
+{% endblock %}
+
 {% block content %}
 <section>
   {% if title -%}
     <h1 class="title">{{ title | safe }}</h1>
   {% endif -%}
 
-  {{ content | safe }}
+  <div class="content">
+    {{ content | safe }}
+  </div>
 </section>
 {% endblock %}

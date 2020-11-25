@@ -25,8 +25,14 @@ module.exports = {
         max: 'max-content',
       },
       minWidth: {
-        sidebar: 300
-      }
-    }
+        sidebar: 300,
+      },
+    },
+    inset: {
+      0: 0,
+      'auto': 'auto',
+      4: '1rem',
+      24: '6rem'
+    },
   }
 }

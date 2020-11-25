@@ -1,0 +1,7 @@
+.content > * + * {
+  @apply mt-8;
+}
+
+.content img {
+  @apply mx-auto rounded-sm shadow-lg;
+}
