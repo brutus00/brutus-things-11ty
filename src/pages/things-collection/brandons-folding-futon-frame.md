@@ -1,5 +1,6 @@
 ---
 title: Brandon's folding futon frame
+description: Brandon's folding futon frame.
 images:
   - image: /static/img/uploads/brandon-futon-sunoku-1.jpg
     description: assembling base frame
