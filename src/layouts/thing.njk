@@ -1,0 +1,25 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+<section>
+  <h1 class="title">{{ title | safe }}</h1>
+
+  {% if description -%}
+    <div>{{ description | nl2br }}</div>
+  {% endif -%}
+
+  {% for image in images -%}
+    <figure>
+      <img
+        src="{% cloudinary %}{{ image.image }}" alt="{{ image.description }}"
+        loading="lazy"
+      />
+      <figcaption>{{ image.description }}</figcaption>
+    </figure>
+  {% endfor -%}
+
+  <div>
+    <a href="..">Back to Things</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,5 +1,5 @@
-const cloud_name = 'brutus';
-const dir_name = '/brutus';
+const cloud_name = 'brutus-things';
+const dir_name = 'netlify';
 
 module.exports = function(transformations = '', format = 'f_auto') {
   const t = transformations && ',' + transformations;

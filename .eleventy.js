@@ -6,8 +6,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('./src/pages/admin/config.yml');
   eleventyConfig.addPassthroughCopy('./static/');
 
-  eleventyConfig.addShortcode('cloudinary', require('./src/shortcodes/cloudinary'));
-  eleventyConfig.addShortcode('newtab', require('./src/shortcodes/newtab'));
+  eleventyConfig.addShortcode('cloudinary', require('./src/11ty/cloudinary'));
+  eleventyConfig.addShortcode('newTab', require('./src/11ty/new-tab'));
+  eleventyConfig.addFilter('sortBy', require('./src/11ty/sort-by'));
 
   return {
     dir: {

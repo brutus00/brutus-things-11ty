@@ -12,7 +12,7 @@
     <a {{ sitenav_item_class | trim | safe }} href="/workshop">Workshop</a>
     <a {{ sitenav_item_class | trim | safe }} href="/about">About</a>
     {% if env == 'development' -%}
-      <a {{ sitenav_item_class | trim | safe }} href="/admin" {% newtab %}>Admin</a>
+      <a {{ sitenav_item_class | trim | safe }} href="/admin" {% newTab %}>Admin</a>
     {%- endif %}
   </nav>
 </div>

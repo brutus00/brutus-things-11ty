@@ -1,5 +1,11 @@
 {% extends 'base.njk' %}
 
 {% block content %}
+<section>
+  {% if title -%}
+    <h1 class="title">{{ title | safe }}</h1>
+  {% endif -%}
+
   {{ content | safe }}
+</section>
 {% endblock %}

@@ -11,17 +11,16 @@ collections:
   - label: Things
     name: things
     create: true
-    folder: src/pages/things
+    folder: src/pages/things-collection
     fields:
-      - widget: string
-        label: Thing Title
-        name: title
-      - widget: list
-        label: Images
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - label: Images
         name: images
+        widget: list
         fields:
-          - { widget: image, label: Image, name: image }
-          - { widget: text, label: Description, name: description }
+          - { label: Image, name: image, widget: image }
+          - { label: Description, name: description, widget: text }
 
   - label: Pages
     name: pages
@@ -30,11 +29,11 @@ collections:
         name: about
         file: src/pages/content/about.md
         fields:
-          - { widget: string, label: Page Title, name: title }
-          - { widget: markdown, label: Body, name: body }
+          - { label: Page Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
       - label: Workshop Page
         name: workshop
         file: src/pages/content/workshop.md
         fields:
-          - { widget: string, label: Page Title, name: title }
-          - { widget: markdown, label: Body, name: body }
+          - { label: Page Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }

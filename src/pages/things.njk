@@ -4,5 +4,15 @@ title: Things
 {% extends 'base.njk' %}
 
 {% block content %}
+<section>
+  <h1 class="title">{{ title }}</h1>
 
+  <ul>
+    {% for thing in collections.thing | reverse -%}
+      <li>
+        <a href="{{ thing.data.page.url }}">{{ thing.data.title }}</a>
+      </li>
+    {% endfor -%}
+  </ul>
+</section>
 {% endblock %}

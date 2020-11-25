@@ -11,24 +11,24 @@
     format('opentype');
 }
 
+/* classes */
+
 .debug {
   border: 5px dashed red;
+}
+
+.title {
+  @apply text-3xl font-serif;
 }
 
 /* sitenav */
 
 #sitenav-opened:not(:checked) ~ .sitenav-overlay {
-  @apply
-    opacity-0
-    pointer-events-none
-  ;
+  @apply opacity-0 pointer-events-none;
 }
 
 #sitenav-opened:not(:checked) ~ .sitenav {
-  @apply
-    -translate-x-full
-    pointer-events-none
-  ;
+  @apply -translate-x-full pointer-events-none;
 }
 
 .sitenav {

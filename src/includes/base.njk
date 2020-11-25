@@ -34,12 +34,14 @@
 </head>
 
 <body>
-  {% include 'header.njk' %}
-  {% include 'nav.njk' %}
+  {% include 'header.njk' -%}
+  {% include 'nav.njk' -%}
 
-  <main>
+  <main class="max-w-screen-lg mx-auto px-4">
     {% block content %}{% endblock %}
   </main>
+
+  {% include 'footer.njk' -%}
 </body>
 
 </html>
