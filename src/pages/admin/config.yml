@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: redesign
+  branch: master
 
 site_url: "https://brutus-things-11ty.netlify.app"
 display_url: "https://brutus-things-11ty.netlify.app"
