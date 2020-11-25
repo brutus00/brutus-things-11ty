@@ -11,7 +11,9 @@
   {% for image in images -%}
     <figure>
       <img
-        src="{% cloudinary %}{{ image.image }}" alt="{{ image.description }}"
+        {{ image.image | srcset([200, 400, 600]) | safe }}
+        width="400"
+        alt="{{ image.description }}"
         loading="lazy"
       />
       <figcaption>{{ image.description }}</figcaption>

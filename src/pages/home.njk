@@ -4,5 +4,21 @@ permalink: /
 {% extends 'base.njk' %}
 
 {% block content %}
-
+<section>
+  <div class="grid gap-px grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+    {% for thing in collections.thing -%}
+      {% for image in thing.data.images -%}
+        <figure>
+          <img
+            class="block w-full object-contain"
+            {{ image.image | srcset([100,200,300], 'ar_1,c_fill,g_auto') | safe }}
+            width="200" height="200"
+            alt="{{ image.description }}"
+            loading="lazy" draggable="false"
+          />
+        </figure>
+      {% endfor -%}
+    {% endfor -%}
+  </div>
+</section>
 {% endblock %}

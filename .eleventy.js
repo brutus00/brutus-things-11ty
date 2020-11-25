@@ -8,7 +8,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addShortcode('cloudinary', require('./src/11ty/cloudinary'));
   eleventyConfig.addShortcode('newTab', require('./src/11ty/new-tab'));
-  eleventyConfig.addFilter('sortBy', require('./src/11ty/sort-by'));
+  eleventyConfig.addFilter('srcset', require('./src/11ty/srcset'));
 
   return {
     dir: {

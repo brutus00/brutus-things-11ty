@@ -37,7 +37,7 @@
   {% include 'header.njk' -%}
   {% include 'nav.njk' -%}
 
-  <main class="max-w-screen-lg mx-auto px-4">
+  <main {% if page.url != '/' %}class="max-w-screen-lg mx-auto px-4"{% endif %}>
     {% block content %}{% endblock %}
   </main>
 

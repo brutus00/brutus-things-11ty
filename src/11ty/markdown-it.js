@@ -1,13 +1,20 @@
 const markdownIt = require('markdown-it');
 const cloudinary = require('./cloudinary');
+const { generateSrcsets } = require('./srcset');
 
 const cloudinaryImageUrl = (md, options) => {
   const defaultImageRenderer = md.renderer.rules.image;
 
   md.renderer.rules.image = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    const src = token.attrGet('src')
-    token.attrSet('src', cloudinary(src, 'w_1000'));
+    const image = token.attrGet('src')
+
+    const sizes = [200,400,600];
+    const srcsets = generateSrcsets(sizes);
+
+    token.attrSet('srcset', srcsets.join(','));
+    token.attrSet('src', `${ cloudinary('w_' + sizes[1]) }/netlify${ image }`);
+    token.attrSet('width', sizes[1]);
     token.attrSet('loading', 'lazy');
 
     return defaultImageRenderer(tokens, idx, options, env, self);
