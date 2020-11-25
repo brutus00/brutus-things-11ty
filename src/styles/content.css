@@ -3,5 +3,5 @@
 }
 
 .content img {
-  @apply mx-auto rounded-sm shadow-lg;
+  @apply block max-w-md mx-auto mt-4 mb-8 rounded-sm shadow-lg;
 }

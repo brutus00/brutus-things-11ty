@@ -27,6 +27,9 @@ module.exports = {
       maxWidth: {
         max: 'max-content',
       },
+      maxHeight: {
+        sm: '24rem',
+      },
       minWidth: {
         sidebar: 300,
       },

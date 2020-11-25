@@ -1,0 +1,15 @@
+body {
+  @apply px-4 py-12;
+}
+
+h1 {
+  @apply text-3xl font-serif mb-12;
+}
+
+img {
+  @apply block max-h-sm mx-auto rounded-sm shadow-lg;
+}
+
+[class*=PreviewContainer] > * + * {
+  @apply mt-4;
+}

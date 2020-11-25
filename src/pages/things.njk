@@ -23,9 +23,9 @@ title: Things
         </a>
 
         <div>
-          <a href="{{ thing.data.page.url }}" class="font-serif text-xl bg-fade">{{ thing.data.title }}</a>
+          <a href="{{ thing.data.page.url }}" class="font-serif text-xl bg-fade -ml-2">{{ thing.data.title }}</a>
           {% if thing.data.description -%}
-            <p class="text-gray-700 leading-5 text-sm">{{ thing.data.description }}</p>
+            <p class="mt-1 text-gray-700 leading-5 text-sm">{{ thing.data.description }}</p>
           {% endif -%}
         </div>
       </li>
